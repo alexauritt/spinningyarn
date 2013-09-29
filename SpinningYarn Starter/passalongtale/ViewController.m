@@ -67,6 +67,10 @@
     return YES;
 }
 
+- (IBAction)presentGCTurnViewController:(id)sender {
+  [[GCTurnBasedMatchHelper sharedInstance] findMatchWithMinPlayers:2 maxPlayers:12 viewController:self];
+}
+
 - (void) animateTextField: (UITextField*) textField up: (BOOL) up
 {
     const int movementDistance = 210; // tweak as needed
@@ -131,4 +135,5 @@
     [characterCountLabel release];
     [super dealloc];
 }
+
 @end

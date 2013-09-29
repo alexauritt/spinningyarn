@@ -15,6 +15,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GCTurnBasedMatchHelper.h"
 
 @interface ViewController : UIViewController <UITextFieldDelegate> {
     
@@ -23,6 +24,8 @@
     IBOutlet UITextField *textInputField;
     IBOutlet UILabel *characterCountLabel;
 }
+
+- (IBAction)presentGCTurnViewController:(id)sender;
 
 - (void) animateTextField: (UITextField*) textField up: (BOOL) up;
 - (IBAction)updateCount:(id)sender;
