@@ -17,6 +17,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "GCTurnBasedMatchHelper.h"
 
 @implementation AppDelegate
 
@@ -37,6 +38,7 @@
     self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    [[GCTurnBasedMatchHelper sharedInstance] authenticateLocalUser];
     return YES;
 }
 
