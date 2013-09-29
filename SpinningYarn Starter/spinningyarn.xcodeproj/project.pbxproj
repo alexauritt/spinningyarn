@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7084FC917F88BBE00D3B31F /* GCTurnBasedMatchHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7084FC817F88BBE00D3B31F /* GCTurnBasedMatchHelper.m */; };
 		E15ADA971442365B009760D0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E15ADA961442365B009760D0 /* Icon.png */; };
 		F2150409143E19230024EDD8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2150408143E19230024EDD8 /* UIKit.framework */; };
 		F215040B143E19230024EDD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F215040A143E19230024EDD8 /* Foundation.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7084FC717F88BBE00D3B31F /* GCTurnBasedMatchHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCTurnBasedMatchHelper.h; sourceTree = "<group>"; };
+		A7084FC817F88BBE00D3B31F /* GCTurnBasedMatchHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTurnBasedMatchHelper.m; sourceTree = "<group>"; };
 		E15ADA961442365B009760D0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		F2150404143E19230024EDD8 /* spinningyarn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spinningyarn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2150408143E19230024EDD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -92,6 +95,8 @@
 				F215041B143E19230024EDD8 /* ViewController.m */,
 				F215041D143E19230024EDD8 /* ViewController.xib */,
 				F215040F143E19230024EDD8 /* Supporting Files */,
+				A7084FC717F88BBE00D3B31F /* GCTurnBasedMatchHelper.h */,
+				A7084FC817F88BBE00D3B31F /* GCTurnBasedMatchHelper.m */,
 			);
 			path = passalongtale;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			files = (
 				F2150415143E19230024EDD8 /* main.m in Sources */,
 				F2150419143E19230024EDD8 /* AppDelegate.m in Sources */,
+				A7084FC917F88BBE00D3B31F /* GCTurnBasedMatchHelper.m in Sources */,
 				F215041C143E19230024EDD8 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
