@@ -27,6 +27,7 @@
 
 - (IBAction)presentGCTurnViewController:(id)sender;
 
+- (IBAction)sendTurn:(id)sender;
 - (void) animateTextField: (UITextField*) textField up: (BOOL) up;
 - (IBAction)updateCount:(id)sender;
 

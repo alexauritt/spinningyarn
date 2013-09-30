@@ -42,6 +42,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             <connections>
+                                <action selector="sendTurn:" destination="-1" eventType="editingDidEnd" id="L1n-XO-h5S"/>
                                 <action selector="updateCount:" destination="-1" eventType="editingChanged" id="22"/>
                             </connections>
                         </textField>

@@ -71,6 +71,39 @@
   [[GCTurnBasedMatchHelper sharedInstance] findMatchWithMinPlayers:2 maxPlayers:12 viewController:self];
 }
 
+- (IBAction)sendTurn:(id)sender {
+  GKTurnBasedMatch *currentMatch = [[GCTurnBasedMatchHelper sharedInstance] currentMatch];
+  NSString *newStoryString;
+  
+  // clip new text input if too long...
+  if ([textInputField.text length] > 250) {
+    newStoryString = [textInputField.text substringToIndex:249];
+  } else {
+    newStoryString = textInputField.text;
+  }
+  
+  // add new text to existing data, encode and save to controller
+  NSString *sendString = [NSString stringWithFormat:@"%@ %@", mainTextController.text, newStoryString];
+  NSData *data = [sendString dataUsingEncoding:NSUTF8StringEncoding];
+  mainTextController.text = sendString;
+  
+  // set next participant
+  NSUInteger currentIndex = [currentMatch.participants indexOfObject:currentMatch.currentParticipant];
+  GKTurnBasedParticipant *nextParticipant;
+  nextParticipant = [currentMatch.participants objectAtIndex:((currentIndex + 1) % [currentMatch.participants count])];
+  [currentMatch endTurnWithNextParticipant:nextParticipant matchData:data completionHandler:^(NSError *error) {
+    if (error) {
+      NSLog(@"%@", error);
+    }
+  }];
+  
+  // reset text input field
+  NSLog(@"Send Turn, %@, %@", data, nextParticipant);
+  textInputField.text = @"";
+  characterCountLabel.text = @"250";
+  characterCountLabel.textColor = [UIColor blackColor];
+}
+
 - (void) animateTextField: (UITextField*) textField up: (BOOL) up
 {
     const int movementDistance = 210; // tweak as needed
