@@ -96,8 +96,14 @@ static GCTurnBasedMatchHelper *sharedHelper = nil;
                             didFindMatch:(GKTurnBasedMatch *)match
 {
   [presentingViewController dismissModalViewControllerAnimated:YES];
-  NSLog(@"did find match %@", match);
   self.currentMatch = match;
+  
+  GKTurnBasedParticipant *firstParticipant = [match.participants objectAtIndex:0];
+  if (firstParticipant.lastTurnDate) {
+    NSLog(@"existing match");
+  } else {
+    NSLog(@"new match");
+  }
 }
 
 -(void)turnBasedMatchmakerViewControllerWasCancelled:(GKTurnBasedMatchmakerViewController *)viewController
